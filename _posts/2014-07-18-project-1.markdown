@@ -1,0 +1,19 @@
+---
+layout: default
+title: (Test) Finding most tweets by city using Long-Lat via Hive (Hadoop)
+modal-id: 1
+date: 2014-07-18
+img: cabin.png
+<!-- alt: image-alt -->
+project-date: April 2014
+background-color: FA5056
+<!-- client: Start Bootstrap -->
+<!-- category: Web Development -->
+description: This is a short example using twitter data set and location of cities data set, we can find which cities send out the most tweets that day.
+tag: Hadoop, Hive, Twitter
+---
+
+
+kjhkjhkj asdfasdfasdfasdf
+<p> asdfasdf </p>
+<h1>asdf</h1>
