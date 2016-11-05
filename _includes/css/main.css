@@ -4,6 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
 body {
     overflow-x: hidden;
 }
@@ -639,4 +640,8 @@ form > .control-group {
     -moz-border-radius: 12px;
     border: 1px solid #FFD800;
     margin-bottom: 5px;
+}
+
+#contact {
+    background-color: #F0F1F3;
 }
