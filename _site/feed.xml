@@ -3,18 +3,18 @@
   <channel>
     <title>Data Playground</title>
     <description>Data Playground - A personal development site for Bright.</description>
-    <link>https://example.github.io/</link>
+    <link>http://dataplayground.ca/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 04 Nov 2016 16:24:25 -0400</pubDate>
-    <lastBuildDate>Fri, 04 Nov 2016 16:24:25 -0400</lastBuildDate>
+    <pubDate>Fri, 04 Nov 2016 22:18:17 -0400</pubDate>
+    <lastBuildDate>Fri, 04 Nov 2016 22:18:17 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>(Test) Finding most tweets by city using Long-Lat via Hive (Hadoop)</title>
         <description>This is a short example using twitter data set and location of cities data set, we can find which cities send out the most tweets that day.</description>
         <pubDate>Fri, 18 Jul 2014 00:00:00 -0400</pubDate>
-        <link>https://example.github.io/2014/07/18/project-1/</link>
-        <guid isPermaLink="true">https://example.github.io/2014/07/18/project-1/</guid>
+        <link>http://dataplayground.ca/2014/07/18/project-1/</link>
+        <guid isPermaLink="true">http://dataplayground.ca/2014/07/18/project-1/</guid>
         
         <category>Hadoop, Hive, Twitter</category>
         
