@@ -232,7 +232,6 @@ section.success {
     position: relative;
     margin: 0 0;
     padding: 0 0;
-    max-width: 400px;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
@@ -645,3 +644,7 @@ form > .control-group {
 #contact {
     background-color: #F0F1F3;
 }
+
+
+/* --------------------- Project 1 - HiveExam -----------*/
+

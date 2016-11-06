@@ -9,7 +9,7 @@
     <meta name="author" content="Wang Bright">
     <link rel="canonical" href="http://dataplayground.ca/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
-
+    <link rel="icon" type="image/png" href="img/favicon/favicon.ico" />
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link rel="stylesheet" href="/style.css">
 
@@ -163,14 +163,14 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
+                        <img src="img/portfolio/tweets.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-lg-8 portfolio-item">
                     <div class="portfolio-description">
-                        <h4><a href="#portfolioModal-1" class="portfolio-link" data-toggle="modal">(Test) Finding most tweets by city using Long-Lat via Hive (Hadoop)</a></h4>
+                        <h4><a href="#portfolioModal-1" class="portfolio-link" data-toggle="modal">Most Tweets by city using Hadoop - Hive</a></h4>
                         <hr>
-                        <p> This is a short example using twitter data set and location of cities data set, we can find which cities send out the most tweets that day. </p>
+                        <p> This is a short example of using twitter data set and location of cities data set, we can find which cities send out the most tweets that day. </p>
                         <br>
                         <h5>Tags:  Hadoop, Hive, Twitter</h5>
                     </div>
@@ -191,7 +191,7 @@
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
+                            <img src="img/portfolio/tweets.jpg" class="img-responsive" alt="">
                         </a>
                     </div>
                 
@@ -312,30 +312,59 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-12">
                         <div class="modal-body">
-                            <h2>(Test) Finding most tweets by city using Long-Lat via Hive (Hadoop)</h2>
-                            <br><br>
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>This is a short example using twitter data set and location of cities data set, we can find which cities send out the most tweets that day.</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com"></a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com"></a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <p>kjhkjhkj asdfasdfasdfasdf</p>
-<p> asdfasdf </p>
-<h1>asdf</h1>
+                            <h3>Most Tweets by city using Hadoop - Hive</h3>
+                            <br>
+                            <div class="row" style="text-align: left;">
+    <p>This is a short example of using twitter data set and location of cities data set, we can find which cities send out the most tweets that day. This is the answers to a two hour test, but I thought it was a interesting test that covers the basics of Hive. Let's get started!</p>
+    <br />
+    <p>I have linked the <a href="img/HiveExam/full_text_small.txt" target="_blank">twitter dataset </a>and <a href="img/HiveExam/cities15000.txt" target="_blank">city location dataset.</a>And here is the data set decriptions:</p>
+    <div><img src="img/HiveExam/data_description.png" alt="Data Description" /></div>
+    <hr />
+    <p>First step: Create folders and import files files into HDFS:</p>
+    <img src="img/HiveExam/image005.png" alt="Files in HDFS" />
+    <hr />
+    <p>Create twitter dataset tables in Hive and taking a look:</p>
+    <div><img src="img/HiveExam/image007.png" alt="Files in HDFS" /></div>
+    <div><img src="img/HiveExam/image009.png" alt="Files in HDFS" /></div>
+    <div><img src="img/HiveExam/image009.png" alt="Files in HDFS" /></div>
+    <div><img src="img/HiveExam/image013.png" alt="Files in HDFS" /></div>
+    <hr />
+    <p>Create cities dataset tables in Hive and taking a look:</p>
+    <div><img src="img/HiveExam/image015.png" alt="Files in HDFS" /></div>
+    <div><img src="img/HiveExam/image017.png" alt="Files in HDFS" /></div>
+    <div><img src="img/HiveExam/image019.png" alt="Files in HDFS" /></div>
+    <div><img src="img/HiveExam/image021.png" alt="Files in HDFS" /></div>
+    <p>The number of time zones can be found like this:</p>
+    <div><img src="img/HiveExam/image023.png" alt="Files in HDFS" /></div>
+    <hr />
+    <p>Ok, that looks good. Next step is to find where each tweet is cloest to which city. This was done using an approximation to decrease the number of calculations by using creating a table with long-lat as integers. This significantly decreases the computation time and size of the merged table. The SQL queries could have been combined but I want to make sure I didn't make any mistakes, that's why there are so many steps.</p>
+    <br />
+    <p>Creating new table called tweet_r that is  the "data" table that has added lat_r and lon_r into it.</p>
+    <div><img src="img/HiveExam/image025.png" alt="Files in HDFS" /></div>
+    <p>Making sure it worked:</p>
+    <div><img src="img/HiveExam/image027.png" alt="Files in HDFS" /></div>
+    <p>Create new table called city_r that is data2 table that has added lat_city_r and lon_city_r into it:</p>
+    <div><img src="img/HiveExam/image029.png" alt="Files in HDFS" /></div>
+    <div><img src="img/HiveExam/image031.png" alt="Files in HDFS" /></div>
+    <p>Using JOIN to join tweet_r and city_r  with the condition t.lat_r = c.lat_city_r AND t.lon_r = c.lon_city_r; This decreases the size of the join file. However, it could possibly element values where the integer lat, lon doesn't match. I didn't take this into consideration to improve speed of the program.</p>
+    <div><img src="img/HiveExam/image033.png" alt="Files in HDFS" /></div>
+    <div><img src="img/HiveExam/image035.png" alt="Files in HDFS" /></div>
+    <p>Now to create a new table with the minimum distance taken into account.</p>
+    <div><img src="img/HiveExam/image037.png" alt="Files in HDFS" /></div>
+    <div><img src="img/HiveExam/image039.png" alt="Files in HDFS" /></div>
+    <p>Get rid of distances that isn't the lowest.</p>
+    <div><img src="img/HiveExam/image041.png" alt="Files in HDFS" /></div>
+    <div><img src="img/HiveExam/image043.png" alt="Files in HDFS" /></div>
+    <hr />
+    <p>Top 10 cities with most tweets:</p>
+    <div><img src="img/HiveExam/image047.png" alt="Files in HDFS" /></div>
+    <p>And that's it, there are quite a few ways to improve this, but it seems like a good result for something thats coded on the spot. There is a issue where some tweets were eliminated because our algorithm can't match location that is not in any city with integer accuracy. We talked about this before, it is a problem but this algorithm saves a lot of computing power and time. This code can also be improved by using Haversine distance instead of Euclidiean distance.</p>
 
+</div>
+
+                            <br><br>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
