@@ -92,7 +92,7 @@
         </div>
 
         <div>
-            <a id="go-down-icon"><img class="go-down-icon" src="/img/scroll1.png"></a>
+            <a id="go-down-icon" href="#about"><img class="go-down-icon" src="/img/scroll1.png"></a>
         </div>
     </header>
      <!-- About Section -->
@@ -124,7 +124,7 @@
                     <p>Hadoop (Hive, Pig, HDFS, Spark)</p>
                     <p>Machine Learning</p>
                     <p>Statistcal Tests/Methods</p>
-                    <p>Math/Physics in general</p>
+                    <p>Math & Physics</p>
                     <br>
                 </div>
                 <div class="col-lg-4" style="text-align: center">
@@ -178,11 +178,45 @@
             </div>
             <br>
             
+            <div class="row portoflio-row" style="background-color: #0BBD9D;">
+                <div class="col-lg-4 portfolio-item">
+                    <a href="#portfolioModal-2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/histogram.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-8 portfolio-item">
+                    <div class="portfolio-description">
+                        <h4><a href="#portfolioModal-2" class="portfolio-link" data-toggle="modal">Udacity Data Analyst Project 1 - Test a Perceptual Phenomenon</a></h4>
+                        <hr>
+                        <p> This is the first project for Udacity Data Analyst. The statistical tests and plotting is done in R markdown. </p>
+                        <br>
+                        <h5>Tags:  R, t-test</h5>
+                    </div>
+                </div>
+            </div>
+            <br>
+            
         </div>
     </section>
 
 
 <!--         <div class="row">
+                
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal-2" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/histogram.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
                 
                     <div class="col-sm-4 portfolio-item">
                         <a href="#portfolioModal-1" class="portfolio-link" data-toggle="modal">
@@ -302,6 +336,39 @@
 
      <!-- Portfolio Modals -->
  
+    <div class="portfolio-modal modal fade" id="portfolioModal-2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="modal-body">
+                            <h3>Udacity Data Analyst Project 1 - Test a Perceptual Phenomenon</h3>
+                            <br>
+                            <div class="row" style="text-align: left;">
+    <br>
+    <br>
+    <p style="size: 2em;">This is the first project for Udacity Data Analyst. The statistical tests and plotting is done in R markdown.</p>
+    <br>
+    <p style="size: 2em;">See the projects here: <a href="img/udacity/p1/P1_Test_a_Perceptual_Phenomenon.pdf" target="_blank">PDF</a>, <a href="img/udacity/p1/P1_Test_a_Perceptual_Phenomenon.html" target="_blank">HTML</a> and <a href="img/udacity/p1/P1 Test a Perceptual Phenomenon.Rmd" target="_blank">RMD download.</a></p>
+    <br>
+    <br>
+    <br>
+</div>
+                            <br><br>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="portfolio-modal modal fade" id="portfolioModal-1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -317,7 +384,7 @@
                             <h3>Most Tweets by city using Hadoop - Hive</h3>
                             <br>
                             <div class="row" style="text-align: left;">
-    <p>This is a short example of using twitter data set and location of cities data set, we can find which cities send out the most tweets that day. This is the answers to a two hour test, but I thought it was a interesting test that covers the basics of Hive. Let's get started!</p>
+    <p>This is a short example of using twitter data set and location of cities data set, we can find which cities send out the most tweets that day. This is the answers to a test, but I thought it was a interesting test that covers the basics of Hive. Let's get started!</p>
     <br />
     <p>I have linked the <a href="img/HiveExam/full_text_small.txt" target="_blank">twitter dataset </a>and <a href="img/HiveExam/cities15000.txt" target="_blank">city location dataset.</a>And here is the data set decriptions:</p>
     <div><img src="img/HiveExam/data_description.PNG" alt="Data Description" /></div>
@@ -339,7 +406,7 @@
     <p>The number of time zones can be found like this:</p>
     <div><img src="img/HiveExam/image023.png" alt="Files in HDFS" /></div>
     <hr />
-    <p>Ok, that looks good. Next step is to find where each tweet is cloest to which city. This was done using an approximation to decrease the number of calculations by using creating a table with long-lat as integers. This significantly decreases the computation time and size of the merged table. The SQL queries could have been combined but I want to make sure I didn't make any mistakes, that's why there are so many steps.</p>
+    <p>Ok, that looks good. Next step is to find where each tweet is cloest to which city. This was done using an approximation to decrease the number of calculations by creating a table with long-lat as integers. This significantly decreases the computation time and size of the merged table. The SQL queries could have been combined but I want to make sure I didn't make any mistakes, that's why there are so many steps.</p>
     <br />
     <p>Creating new table called tweet_r that is  the "data" table that has added lat_r and lon_r into it.</p>
     <div><img src="img/HiveExam/image025.png" alt="Files in HDFS" /></div>

@@ -5,9 +5,21 @@
     <description>Data Playground - A personal development site for Bright.</description>
     <link>http://dataplayground.ca/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 06 Nov 2016 13:44:45 -0500</pubDate>
-    <lastBuildDate>Sun, 06 Nov 2016 13:44:45 -0500</lastBuildDate>
+    <pubDate>Wed, 09 Nov 2016 15:46:11 -0500</pubDate>
+    <lastBuildDate>Wed, 09 Nov 2016 15:46:11 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Udacity Data Analyst Project 1 - Test a Perceptual Phenomenon</title>
+        <description>This is the first project for Udacity Data Analyst. The statistical tests and plotting is done in R markdown.</description>
+        <pubDate>Sat, 05 Nov 2016 00:00:00 -0400</pubDate>
+        <link>http://dataplayground.ca/2016/11/05/project-2/</link>
+        <guid isPermaLink="true">http://dataplayground.ca/2016/11/05/project-2/</guid>
+        
+        <category>R, t-test</category>
+        
+        
+      </item>
     
       <item>
         <title>Most Tweets by city using Hadoop - Hive</title>

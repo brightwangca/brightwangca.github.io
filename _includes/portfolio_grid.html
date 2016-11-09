@@ -8,7 +8,7 @@
                     <br>
                 </div>
             </div>
-            {% for post in site.posts %}
+            {% for post in site.posts reversed %}
             <div class="row portoflio-row" style="background-color: #{{ post.background-color }};">
                 <div class="col-lg-4 portfolio-item">
                     <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">

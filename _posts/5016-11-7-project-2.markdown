@@ -1,0 +1,26 @@
+---
+layout: default
+title: Udacity Data Analyst Project 1 - Test a Perceptual Phenomenon
+modal-id: 2
+date: 2016-11-5
+img: histogram.png
+
+<!-- alt: image-alt -->
+project-date: April 2014
+background-color: 0BBD9D
+<!-- client: Start Bootstrap -->
+<!-- category: Web Development -->
+description: This is the first project for Udacity Data Analyst. The statistical tests and plotting is done in R markdown.
+tag: R, t-test
+---
+
+<div class="row" style="text-align: left;">
+    <br>
+    <br>
+    <p style="size: 2em;">This is the first project for Udacity Data Analyst. The statistical tests and plotting is done in R markdown.</p>
+    <br>
+    <p style="size: 2em;">See the projects here: <a href="img/udacity/p1/P1_Test_a_Perceptual_Phenomenon.pdf" target="_blank">PDF</a>, <a href="img/udacity/p1/P1_Test_a_Perceptual_Phenomenon.html" target="_blank">HTML</a> and <a href="img/udacity/p1/P1 Test a Perceptual Phenomenon.Rmd" target="_blank">RMD download.</a></p>
+    <br>
+    <br>
+    <br>
+</div>

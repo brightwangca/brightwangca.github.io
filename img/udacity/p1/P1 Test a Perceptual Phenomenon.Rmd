@@ -1,0 +1,99 @@
+---
+title: "P1 Test a Perceptual Phenomenon"
+author: "Bright Wang"
+date: "November 6, 2016"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+******
+#### Statistics: The Science of Decisions Project - Udacity Data Analyst P1.
+
+Introduction - "In a Stroop task, participants are presented with a list of words, with each word displayed in a color of ink. The participant's task is to say out loud the color of the ink in which the word is printed. The task has two conditions: a congruent words condition, and an incongruent words condition. In the congruent words condition, the words being displayed are color words whose names match the colors in which they are printed: for example RED, BLUE. In the incongruent words condition, the words displayed are color words whose names do not match the colors in which they are printed: for example PURPLE, ORANGE. In each case, we measure the time it takes to name the ink colors in equally-sized lists. Each participant will go through and record a time from each condition."
+
+******
+#### Question 1: What is our independent variable? What is our dependent variable?
+
+The independent variable is the difficulty of the word list and if the list is Congruent or incongruent. The dependent variable is the response time.
+
+******
+#### Question 2: What is an appropriate set of hypotheses for this task? What kind of statistical test do you expect to perform? Justify your choices.
+
+The appropriate hypothese for this task is the two-tailed t-test. Two-tailed t-test because we can not make any assumption whether congruent or incongruent is faster.
+
+The Null Hypothesis is $H_0 = \mu_{congruent}-\mu_{incongruent} = 0$ or "There is no difference in the response time between congruent and incongruent samples."
+
+
+The Alternative Hypothesis is $H_A = \mu_{congruent}-\mu_{incongruent} \neq 0$ or "There is a significant difference in the response time between congruent and incongruent samples."
+
+******
+#### Question 3: Report some descriptive statistics regarding this dataset. Include at least one measure of central tendency and at least one measure of variability.
+
+Import CSV and show head
+
+```{r, echo=TRUE}
+df <- read.csv(file="stroopdata.csv", header = T)
+head(df)
+```
+
+Congruent Mean:
+```{r}
+mean(df$Congruent)
+```
+
+Congruent Median:
+```{r}
+median(df$Congruent)
+```
+
+Congruent Standard Deviation:
+```{r}
+sd(df$Congruent)
+```
+
+Incongruent Mean:
+```{r}
+mean(df$Incongruent)
+```
+
+Incongruent Median:
+```{r}
+median(df$Incongruent)
+```
+
+Incongruent Standard Deviation:
+```{r}
+sd(df$Incongruent)
+```
+
+******
+#### Question 4: Provide one or two visualizations that show the distribution of the sample data. Write one or two sentences noting what you observe about the plot or plots.
+
+Boxplot of Congruent and Incongruent.
+```{r, echo=TRUE}
+boxplot(df$Congruent, df$Incongruent, names=c("Congruent","Incongruent"), 
+        main="Congruent vs Incongruent Boxplot")
+```
+
+Here is the histogram of Congruent and Incongruent on the same histogram:
+```{r, echo=TRUE}
+hist(df$Congruent, main="Congruent vs Incongruent Histogram", xlab="Time", ylab="Count",  
+     col=rgb(1,0,0,0.2), breaks = seq(0,40,by=1))
+hist(df$Incongruent, col=rgb(0,0,1,0.2), add = T, breaks = seq(0,40,by=1))
+```
+
+From these plots, it is a good guess that the data sets would reject the Null Hypothesis as the two data samples seems very different.
+
+******
+#### Question 4: Now, perform the statistical test and report your results. What is your confidence level and your critical statistic value? Do you reject the null hypothesis or fail to reject it? Come to a conclusion in terms of the experiment task. Did the results match up with your expectations?
+
+```{r, echo=TRUE}
+t.test(df$Congruent, df$Incongruent, alternative = c("two.sided"), paired = FALSE,
+       var.equal = T, conf.level = 0.95)
+```
+
+The confidence level is set at 5%, the t-critical is 2.068, t=-6.53 and the p-value is almost 0 here. The Null Hypothesis is rejected, this matched our expectations from looking at the plots of data.
+
+
