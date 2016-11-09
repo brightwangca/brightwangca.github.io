@@ -6,7 +6,7 @@ date: 2016-11-5
 img: tweets.jpg
 
 <!-- alt: image-alt -->
-project-date: Nov 2016
+project-date: Nov 5th, 2016
 background-color: FA5056
 <!-- client: Start Bootstrap -->
 <!-- category: Web Development -->

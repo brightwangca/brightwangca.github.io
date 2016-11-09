@@ -6,7 +6,7 @@ date: 2016-11-5
 img: histogram.png
 
 <!-- alt: image-alt -->
-project-date: April 2014
+project-date: Nov 7th, 2016
 background-color: 0BBD9D
 <!-- client: Start Bootstrap -->
 <!-- category: Web Development -->

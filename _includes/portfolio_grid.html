@@ -26,7 +26,10 @@
                         <hr>
                         <p> {{ post.description }} </p>
                         <br>
-                        <h5>Tags:  {{ post.tag }}</h5>
+                        <div clss="row" style="width: 100%; padding: 0 0;">
+                            <div class="col-lg-8" style="padding: 0 0;"><h5>Tags:  {{ post.tag }}</h5></div>
+                            <div class="col-lg-4" style="padding: 0 0;"><h5>Date: {{ post.project-date }}</h5></div>
+                        </div>
                     </div>
                 </div>
             </div>
