@@ -90,10 +90,9 @@ From these plots, it is a good guess that the data sets would reject the Null Hy
 #### Question 4: Now, perform the statistical test and report your results. What is your confidence level and your critical statistic value? Do you reject the null hypothesis or fail to reject it? Come to a conclusion in terms of the experiment task. Did the results match up with your expectations?
 
 ```{r, echo=TRUE}
-t.test(df$Congruent, df$Incongruent, alternative = c("two.sided"), paired = FALSE,
+t.test(df$Congruent, df$Incongruent, alternative = c("two.sided"), paired = T,
        var.equal = T, conf.level = 0.95)
 ```
 
-The confidence level is set at 5%, the t-critical is 2.068, t=-6.53 and the p-value is almost 0 here. The Null Hypothesis is rejected, this matched our expectations from looking at the plots of data.
-
+The confidence level is set at 5%, the t-critical is 2.068, t=-8.02 and the p-value is almost 0 here. The Null Hypothesis is rejected, this matched our expectations from looking at the plots of data.
 
